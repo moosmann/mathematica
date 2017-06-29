@@ -1,0 +1,160 @@
+(\[Lambda]z*(\[Lambda]z^3*Derivative[0, 1][\[Phi]][x, y]^8 + 
+   9*\[Lambda]z^3*Derivative[0, 2][\[Phi]][x, y]^4 + 
+   \[Lambda]z^3*Derivative[0, 4][\[Phi]][x, y]^2 + 
+   4*\[Lambda]z^3*Derivative[0, 1][\[Phi]][x, y]^6*
+    Derivative[1, 0][\[Phi]][x, y]^2 + 16*Pi*\[Lambda]z^2*
+    Derivative[0, 4][\[Phi]][x, y]*Derivative[1, 0][\[Phi]][x, y]^2 + 
+   \[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^8 + 
+   256*Pi^2*\[Lambda]z*Derivative[1, 1][\[Phi]][x, y]^2 - 
+   8*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^4*
+    Derivative[1, 1][\[Phi]][x, y]^2 + 16*\[Lambda]z^3*
+    Derivative[1, 1][\[Phi]][x, y]^4 + 256*Pi^2*\[Lambda]z*
+    Derivative[1, 0][\[Phi]][x, y]*Derivative[1, 2][\[Phi]][x, y] - 
+   8*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^5*
+    Derivative[1, 2][\[Phi]][x, y] + 32*\[Lambda]z^3*
+    Derivative[1, 0][\[Phi]][x, y]*Derivative[1, 1][\[Phi]][x, y]^2*
+    Derivative[1, 2][\[Phi]][x, y] + 16*\[Lambda]z^3*
+    Derivative[1, 0][\[Phi]][x, y]^2*Derivative[1, 2][\[Phi]][x, y]^2 - 
+   512*Pi^3*Derivative[2, 0][\[Phi]][x, y] - 
+   12*\[Lambda]z^3*Derivative[0, 4][\[Phi]][x, y]*
+    Derivative[1, 0][\[Phi]][x, y]^2*Derivative[2, 0][\[Phi]][x, y] - 
+   80*Pi*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]^4*
+    Derivative[2, 0][\[Phi]][x, y] - 64*Pi*\[Lambda]z^2*
+    Derivative[1, 1][\[Phi]][x, y]^2*Derivative[2, 0][\[Phi]][x, y] - 
+   64*Pi*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*
+    Derivative[1, 2][\[Phi]][x, y]*Derivative[2, 0][\[Phi]][x, y] + 
+   256*Pi^2*\[Lambda]z*Derivative[2, 0][\[Phi]][x, y]^2 + 
+   30*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^4*
+    Derivative[2, 0][\[Phi]][x, y]^2 + 24*\[Lambda]z^3*
+    Derivative[1, 1][\[Phi]][x, y]^2*Derivative[2, 0][\[Phi]][x, y]^2 + 
+   24*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]*Derivative[1, 2][\[Phi]][x, 
+     y]*Derivative[2, 0][\[Phi]][x, y]^2 - 48*Pi*\[Lambda]z^2*
+    Derivative[2, 0][\[Phi]][x, y]^3 + 9*\[Lambda]z^3*
+    Derivative[2, 0][\[Phi]][x, y]^4 + 12*\[Lambda]z^2*
+    Derivative[0, 2][\[Phi]][x, y]^3*
+    (-4*Pi + \[Lambda]z*Derivative[2, 0][\[Phi]][x, y]) - 
+   8*\[Lambda]z^3*Derivative[0, 1][\[Phi]][x, y]^5*
+    (Derivative[0, 3][\[Phi]][x, y] + Derivative[2, 1][\[Phi]][x, y]) - 
+   16*\[Lambda]z^2*Derivative[0, 1][\[Phi]][x, y]^3*
+    Derivative[1, 0][\[Phi]][x, y]*(\[Lambda]z*Derivative[0, 3][\[Phi]][x, y]*
+      Derivative[1, 0][\[Phi]][x, y] + Derivative[1, 1][\[Phi]][x, y]*
+      (8*Pi - 6*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y] - 
+       2*\[Lambda]z*Derivative[2, 0][\[Phi]][x, y]) + 
+     \[Lambda]z*Derivative[1, 0][\[Phi]][x, y]*Derivative[2, 1][\[Phi]][x, 
+       y]) + 4*\[Lambda]z^3*Derivative[0, 4][\[Phi]][x, y]*
+    Derivative[2, 2][\[Phi]][x, y] + 32*Pi*\[Lambda]z^2*
+    Derivative[1, 0][\[Phi]][x, y]^2*Derivative[2, 2][\[Phi]][x, y] - 
+   24*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^2*
+    Derivative[2, 0][\[Phi]][x, y]*Derivative[2, 2][\[Phi]][x, y] + 
+   4*\[Lambda]z^3*Derivative[2, 2][\[Phi]][x, y]^2 + 
+   256*Pi^2*\[Lambda]z*Derivative[1, 0][\[Phi]][x, y]*
+    Derivative[3, 0][\[Phi]][x, y] - 8*\[Lambda]z^3*
+    Derivative[1, 0][\[Phi]][x, y]^5*Derivative[3, 0][\[Phi]][x, y] + 
+   32*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]*
+    Derivative[1, 1][\[Phi]][x, y]^2*Derivative[3, 0][\[Phi]][x, y] + 
+   32*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^2*
+    Derivative[1, 2][\[Phi]][x, y]*Derivative[3, 0][\[Phi]][x, y] - 
+   64*Pi*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*
+    Derivative[2, 0][\[Phi]][x, y]*Derivative[3, 0][\[Phi]][x, y] + 
+   24*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]*
+    Derivative[2, 0][\[Phi]][x, y]^2*Derivative[3, 0][\[Phi]][x, y] + 
+   16*\[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^2*
+    Derivative[3, 0][\[Phi]][x, y]^2 - 2*\[Lambda]z^2*
+    Derivative[0, 1][\[Phi]][x, y]^4*
+    (-15*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y]^2 - 
+     3*\[Lambda]z*Derivative[1, 0][\[Phi]][x, y]^4 + 
+     4*\[Lambda]z*Derivative[1, 1][\[Phi]][x, y]^2 + 
+     8*Pi*Derivative[2, 0][\[Phi]][x, y] + 
+     \[Lambda]z*Derivative[2, 0][\[Phi]][x, y]^2 + 
+     10*Derivative[0, 2][\[Phi]][x, y]*
+      (4*Pi - \[Lambda]z*Derivative[2, 0][\[Phi]][x, y]) + 
+     4*\[Lambda]z*Derivative[1, 0][\[Phi]][x, y]*
+      (Derivative[1, 2][\[Phi]][x, y] + Derivative[3, 0][\[Phi]][x, y])) + 
+   2*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y]^2*
+    (128*Pi^2 - \[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]^4 + 
+     12*\[Lambda]z^2*Derivative[1, 1][\[Phi]][x, y]^2 - 
+     40*Pi*\[Lambda]z*Derivative[2, 0][\[Phi]][x, y] + 
+     11*\[Lambda]z^2*Derivative[2, 0][\[Phi]][x, y]^2 + 
+     12*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*
+      (Derivative[1, 2][\[Phi]][x, y] + Derivative[3, 0][\[Phi]][x, y])) + 
+   2*\[Lambda]z^3*Derivative[0, 4][\[Phi]][x, y]*Derivative[4, 0][\[Phi]][x, 
+     y] + 16*Pi*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]^2*
+    Derivative[4, 0][\[Phi]][x, y] - 12*\[Lambda]z^3*
+    Derivative[1, 0][\[Phi]][x, y]^2*Derivative[2, 0][\[Phi]][x, y]*
+    Derivative[4, 0][\[Phi]][x, y] + 4*\[Lambda]z^3*
+    Derivative[2, 2][\[Phi]][x, y]*Derivative[4, 0][\[Phi]][x, y] + 
+   \[Lambda]z^3*Derivative[4, 0][\[Phi]][x, y]^2 + 
+   8*\[Lambda]z*Derivative[0, 1][\[Phi]][x, y]*
+    (-2*\[Lambda]z^2*Derivative[0, 4][\[Phi]][x, y]*Derivative[1, 0][\[Phi]][
+       x, y]*Derivative[1, 1][\[Phi]][x, y] - 16*Pi*\[Lambda]z*
+      Derivative[1, 0][\[Phi]][x, y]^3*Derivative[1, 1][\[Phi]][x, y] + 
+     4*\[Lambda]z^2*Derivative[0, 2][\[Phi]][x, y]*
+      Derivative[1, 0][\[Phi]][x, y]^3*Derivative[1, 1][\[Phi]][x, y] + 
+     12*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]^3*
+      Derivative[1, 1][\[Phi]][x, y]*Derivative[2, 0][\[Phi]][x, y] + 
+     32*Pi^2*Derivative[2, 1][\[Phi]][x, y] - 8*Pi*\[Lambda]z*
+      Derivative[0, 2][\[Phi]][x, y]*Derivative[2, 1][\[Phi]][x, y] + 
+     3*\[Lambda]z^2*Derivative[0, 2][\[Phi]][x, y]^2*Derivative[2, 1][\[Phi]][
+       x, y] - \[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]^4*
+      Derivative[2, 1][\[Phi]][x, y] + 4*\[Lambda]z^2*
+      Derivative[1, 1][\[Phi]][x, y]^2*Derivative[2, 1][\[Phi]][x, y] + 
+     4*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*Derivative[1, 2][\[Phi]][
+       x, y]*Derivative[2, 1][\[Phi]][x, y] - 8*Pi*\[Lambda]z*
+      Derivative[2, 0][\[Phi]][x, y]*Derivative[2, 1][\[Phi]][x, y] + 
+     2*\[Lambda]z^2*Derivative[0, 2][\[Phi]][x, y]*Derivative[2, 0][\[Phi]][
+       x, y]*Derivative[2, 1][\[Phi]][x, y] + 3*\[Lambda]z^2*
+      Derivative[2, 0][\[Phi]][x, y]^2*Derivative[2, 1][\[Phi]][x, y] - 
+     4*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*Derivative[1, 1][\[Phi]][
+       x, y]*Derivative[2, 2][\[Phi]][x, y] + 4*\[Lambda]z^2*
+      Derivative[1, 0][\[Phi]][x, y]*Derivative[2, 1][\[Phi]][x, y]*
+      Derivative[3, 0][\[Phi]][x, y] + Derivative[0, 3][\[Phi]][x, y]*
+      (32*Pi^2 + 3*\[Lambda]z^2*Derivative[0, 2][\[Phi]][x, y]^2 - 
+       \[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]^4 + 
+       4*\[Lambda]z^2*Derivative[1, 1][\[Phi]][x, y]^2 - 
+       8*Pi*\[Lambda]z*Derivative[2, 0][\[Phi]][x, y] + 
+       3*\[Lambda]z^2*Derivative[2, 0][\[Phi]][x, y]^2 + 
+       2*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y]*
+        (-4*Pi + \[Lambda]z*Derivative[2, 0][\[Phi]][x, y]) + 
+       4*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*
+        (Derivative[1, 2][\[Phi]][x, y] + Derivative[3, 0][\[Phi]][x, y])) - 
+     2*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*Derivative[1, 1][\[Phi]][
+       x, y]*Derivative[4, 0][\[Phi]][x, y]) + 
+   4*\[Lambda]z^2*Derivative[0, 1][\[Phi]][x, y]^2*
+    (4*\[Lambda]z*Derivative[0, 3][\[Phi]][x, y]^2 - 
+     24*Pi*Derivative[0, 2][\[Phi]][x, y]*Derivative[1, 0][\[Phi]][x, y]^2 + 
+     3*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y]^2*
+      Derivative[1, 0][\[Phi]][x, y]^2 + \[Lambda]z*
+      Derivative[1, 0][\[Phi]][x, y]^6 + 12*\[Lambda]z*
+      Derivative[1, 0][\[Phi]][x, y]^2*Derivative[1, 1][\[Phi]][x, y]^2 - 
+     4*\[Lambda]z*Derivative[1, 0][\[Phi]][x, y]^3*Derivative[1, 2][\[Phi]][
+       x, y] - 24*Pi*Derivative[1, 0][\[Phi]][x, y]^2*
+      Derivative[2, 0][\[Phi]][x, y] + 18*\[Lambda]z*Derivative[0, 2][\[Phi]][
+       x, y]*Derivative[1, 0][\[Phi]][x, y]^2*Derivative[2, 0][\[Phi]][x, 
+       y] + 3*\[Lambda]z*Derivative[1, 0][\[Phi]][x, y]^2*
+      Derivative[2, 0][\[Phi]][x, y]^2 + Derivative[0, 4][\[Phi]][x, y]*
+      (4*Pi - 3*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y] - 
+       \[Lambda]z*Derivative[2, 0][\[Phi]][x, y]) + 
+     8*\[Lambda]z*Derivative[0, 3][\[Phi]][x, y]*Derivative[2, 1][\[Phi]][x, 
+       y] + 4*\[Lambda]z*Derivative[2, 1][\[Phi]][x, y]^2 + 
+     8*Pi*Derivative[2, 2][\[Phi]][x, y] - 6*\[Lambda]z*
+      Derivative[0, 2][\[Phi]][x, y]*Derivative[2, 2][\[Phi]][x, y] - 
+     2*\[Lambda]z*Derivative[2, 0][\[Phi]][x, y]*Derivative[2, 2][\[Phi]][x, 
+       y] - 4*\[Lambda]z*Derivative[1, 0][\[Phi]][x, y]^3*
+      Derivative[3, 0][\[Phi]][x, y] + 4*Pi*Derivative[4, 0][\[Phi]][x, y] - 
+     3*\[Lambda]z*Derivative[0, 2][\[Phi]][x, y]*Derivative[4, 0][\[Phi]][x, 
+       y] - \[Lambda]z*Derivative[2, 0][\[Phi]][x, y]*
+      Derivative[4, 0][\[Phi]][x, y]) - 4*Derivative[0, 2][\[Phi]][x, y]*
+    (\[Lambda]z^3*Derivative[0, 4][\[Phi]][x, y]*
+      Derivative[1, 0][\[Phi]][x, y]^2 + \[Lambda]z^2*
+      Derivative[1, 0][\[Phi]][x, y]^4*(4*Pi - 5*\[Lambda]z*
+        Derivative[2, 0][\[Phi]][x, y]) + 
+     (4*Pi - \[Lambda]z*Derivative[2, 0][\[Phi]][x, y])*
+      (32*Pi^2 + 4*\[Lambda]z^2*Derivative[1, 1][\[Phi]][x, y]^2 - 
+       8*Pi*\[Lambda]z*Derivative[2, 0][\[Phi]][x, y] + 
+       3*\[Lambda]z^2*Derivative[2, 0][\[Phi]][x, y]^2) - 
+     4*\[Lambda]z^2*Derivative[1, 0][\[Phi]][x, y]*
+      (-4*Pi + \[Lambda]z*Derivative[2, 0][\[Phi]][x, y])*
+      (Derivative[1, 2][\[Phi]][x, y] + Derivative[3, 0][\[Phi]][x, y]) + 
+     \[Lambda]z^3*Derivative[1, 0][\[Phi]][x, y]^2*
+      (2*Derivative[2, 2][\[Phi]][x, y] + Derivative[4, 0][\[Phi]][x, y]))))/
+ (1024*Pi^4)

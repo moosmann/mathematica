@@ -1,0 +1,266 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      7799,        257]
+NotebookOptionsPosition[      7217,        232]
+NotebookOutlinePosition[      7553,        247]
+CellTagsIndexPosition[      7510,        244]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"JTH", "[", 
+   RowBox[{"y_", ",", "x0_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{"(", " ", 
+     RowBox[{"\[Pi]", "^", "2"}], ")"}]}], "*", "\n", 
+   RowBox[{"NIntegrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "3"}], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Exp", "[", 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Pi]", "/", 
+            RowBox[{"(", 
+             RowBox[{"11.24", " ", "y"}], ")"}]}], " ", "x"}], "]"}], "+", 
+         "1"}], ")"}]}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{
+        RowBox[{"x", "^", "3"}], "/", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Exp", "[", 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Pi]", "/", 
+             RowBox[{"(", 
+              RowBox[{"11.24", " ", "y"}], ")"}]}], " ", 
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "+", 
+              RowBox[{"x", "^", "2"}]}], "]"}]}], "]"}], "+", "1"}], 
+         ")"}]}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "x0"}], "}"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", "100"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{3.456832605635573*^9, 3.45889951003597*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m", "=", 
+   RowBox[{".511", " ", "MeV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ssqrt", "=", 
+   RowBox[{"10", " ", "MeV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rho", "=", 
+   RowBox[{"22.48", " ", 
+    RowBox[{"y", "^", "4"}], 
+    RowBox[{"m", "^", "4"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R0", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3", "/", 
+       RowBox[{"(", 
+        RowBox[{"4", "\[Pi]"}], ")"}]}], 
+      RowBox[{"ssqrt", "/", "rho"}]}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"1", "/", "3"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{
+    RowBox[{"m", "^", "4"}], " ", 
+    RowBox[{"JTH", "[", 
+     RowBox[{"y", ",", "100"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MeV", "=", 
+   RowBox[{
+    RowBox[{"10", "^", "6"}], "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"6.582", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"(", 
+         RowBox[{"-", "16"}], ")"}]}]}], ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rho", "/", "J"}], "*", "R0"}]}], "Input",
+ CellChangeTimes->{{3.456832175884549*^9, 3.456832267271401*^9}, {
+  3.456832297594773*^9, 3.456832424954518*^9}, {3.456832481181877*^9, 
+  3.456832563903366*^9}, {3.456832891301871*^9, 3.456832932281614*^9}, {
+  3.45683325143364*^9, 3.456833280279833*^9}, {3.456833318277324*^9, 
+  3.456833324534048*^9}, {3.456833380311536*^9, 3.456833549788593*^9}, {
+  3.4568335901722*^9, 3.456833648899239*^9}, {3.456833746289956*^9, 
+  3.456833755176829*^9}}],
+
+Cell[BoxData["9.985391015629734`*^-22"], "Output",
+ CellChangeTimes->{{3.456832258621023*^9, 3.456832269173989*^9}, {
+   3.456832321125503*^9, 3.4568323513054*^9}, 3.456832387046247*^9, {
+   3.456832433845473*^9, 3.456832457689079*^9}, 3.456832488692418*^9, 
+   3.456832524894649*^9, 3.456832627632312*^9, {3.456832896826996*^9, 
+   3.456832917054245*^9}, {3.456833244921883*^9, 3.456833270815556*^9}, 
+   3.456833458005634*^9, {3.456833496013862*^9, 3.456833533162072*^9}, 
+   3.456833670201704*^9, {3.456833740129234*^9, 3.456833757436237*^9}, 
+   3.458899430124788*^9, 3.458899534135452*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m", "=", 
+   RowBox[{".511", " ", "MeV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ssqrt", "=", 
+   RowBox[{"1000", " ", "MeV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rho", "=", 
+   RowBox[{"22.48", " ", 
+    RowBox[{"y", "^", "4"}], 
+    RowBox[{"m", "^", "4"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R0", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3", "/", 
+       RowBox[{"(", 
+        RowBox[{"4", "\[Pi]"}], ")"}]}], 
+      RowBox[{"ssqrt", "/", "rho"}]}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"1", "/", "3"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{
+    RowBox[{"m", "^", "4"}], " ", 
+    RowBox[{"JTH", "[", 
+     RowBox[{"y", ",", "100"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MeV", "=", 
+   RowBox[{
+    RowBox[{"10", "^", "6"}], "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"6.582", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"(", 
+         RowBox[{"-", "16"}], ")"}]}]}], ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rho", "/", "J"}], "*", "R0"}]}], "Input",
+ CellChangeTimes->{{3.458899598234246*^9, 3.458899601075812*^9}}],
+
+Cell[BoxData["4.634807943740434`*^-21"], "Output",
+ CellChangeTimes->{3.458899610919452*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m", "=", 
+   RowBox[{".511", " ", "MeV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ssqrt", "=", 
+   RowBox[{"100000", " ", "MeV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rho", "=", 
+   RowBox[{"22.48", " ", 
+    RowBox[{"y", "^", "4"}], 
+    RowBox[{"m", "^", "4"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R0", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3", "/", 
+       RowBox[{"(", 
+        RowBox[{"4", "\[Pi]"}], ")"}]}], 
+      RowBox[{"ssqrt", "/", "rho"}]}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"1", "/", "3"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "=", 
+   RowBox[{
+    RowBox[{"m", "^", "4"}], " ", 
+    RowBox[{"JTH", "[", 
+     RowBox[{"y", ",", "100"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"MeV", "=", 
+   RowBox[{
+    RowBox[{"10", "^", "6"}], "*", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"6.582", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"(", 
+         RowBox[{"-", "16"}], ")"}]}]}], ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rho", "/", "J"}], "*", "R0"}]}], "Input",
+ CellChangeTimes->{{3.45889962780225*^9, 3.458899628650289*^9}}],
+
+Cell[BoxData["2.1512872797605402`*^-20"], "Output",
+ CellChangeTimes->{3.45889963146491*^9}]
+}, Open  ]]
+},
+WindowSize->{1280, 960},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 1251, 38, 55, "Input"],
+Cell[CellGroupData[{
+Cell[1821, 62, 1760, 51, 187, "Input"],
+Cell[3584, 115, 594, 8, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4215, 128, 1379, 45, 187, "Input"],
+Cell[5597, 175, 92, 1, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5726, 181, 1380, 45, 187, "Input"],
+Cell[7109, 228, 92, 1, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

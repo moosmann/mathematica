@@ -1,0 +1,343 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     12280,        334]
+NotebookOptionsPosition[     11956,        318]
+NotebookOutlinePosition[     12292,        333]
+CellTagsIndexPosition[     12249,        330]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Remove", "@", "mcplot"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mcplot", "[", 
+    RowBox[{
+    "y_", ",", "cosmin_", ",", "acgoal_", ",", "prgoal_", ",", 
+     "partlist_List", ",", 
+     RowBox[{"Xmax_:", " ", "10"}], ",", 
+     RowBox[{"points_:", " ", "50"}], ",", "method_"}], "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"dX", "=", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"Xmax", "-", "2"}], ")"}], "/", "points"}]}], ",", "cos", 
+       ",", "solx1p", ",", "int"}], "}"}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"solx1p", "=", 
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"cos", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "2"}], "+", 
+               RowBox[{"X", "^", "2"}]}], ")"}], " ", "x2"}], "+", 
+            RowBox[{"Sqrt", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"x2", "^", "2"}]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "4"}], " ", 
+                 RowBox[{"X", "^", "2"}]}], "+", 
+                RowBox[{"X", "^", "4"}], "+", 
+                RowBox[{"4", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"cos", "^", "2"}]}], ")"}], " ", 
+                 RowBox[{"x2", "^", "2"}]}]}], ")"}]}], "]"}]}], ")"}], "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "2"}], "+", 
+            RowBox[{"2", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", "1"}], "+", 
+               RowBox[{"cos", "^", "2"}]}], ")"}], " ", 
+             RowBox[{"x2", "^", "2"}]}]}], ")"}]}], ")"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"cos", "=", 
+       RowBox[{
+        RowBox[{"cos1", " ", "cos2"}], "+", 
+        RowBox[{
+         SqrtBox[
+          RowBox[{"1", "-", 
+           SuperscriptBox["cos1", "2"]}]], " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           SuperscriptBox["cos2", "2"]}]], " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "p1", " ", "\[Pi]"}], "]"}], " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", " ", "p2", " ", "\[Pi]"}], "]"}]}], "+", 
+        RowBox[{
+         SqrtBox[
+          RowBox[{"1", "-", 
+           SuperscriptBox["cos1", "2"]}]], " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           SuperscriptBox["cos2", "2"]}]], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"2", " ", "p1", " ", "\[Pi]"}], "]"}], " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"2", " ", "p2", " ", "\[Pi]"}], "]"}]}]}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"int", "=", 
+       RowBox[{"Evaluate", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Boole", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"cos1", " ", "cos2"}], "+", 
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               SuperscriptBox["cos1", "2"]}]], " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               SuperscriptBox["cos2", "2"]}]], " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", "p1", " ", "\[Pi]"}], "]"}], " ", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"2", " ", "p2", " ", "\[Pi]"}], "]"}]}], "+", 
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               SuperscriptBox["cos1", "2"]}]], " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               SuperscriptBox["cos2", "2"]}]], " ", 
+             RowBox[{"Sin", "[", 
+              RowBox[{"2", " ", "p1", " ", "\[Pi]"}], "]"}], " ", 
+             RowBox[{"Sin", "[", 
+              RowBox[{"2", " ", "p2", " ", "\[Pi]"}], "]"}]}]}], ">", 
+           "cosmin"}], "]"}], "*", " ", "\[IndentingNewLine]", 
+         RowBox[{"Boole", "[", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "4"}], " ", 
+              RowBox[{"X", "^", "2"}]}], "+", 
+             RowBox[{"X", "^", "4"}], "+", 
+             RowBox[{"4", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "1"}], "+", 
+                RowBox[{"cos", "^", "2"}]}], ")"}], " ", 
+              RowBox[{"x2", "^", "2"}]}]}], ")"}], ">", "0"}], "]"}], " ", 
+         "*", "\[IndentingNewLine]", 
+         FractionBox["1", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "cos"}], " ", "x2"}], "+", 
+             FractionBox[
+              RowBox[{"solx1p", " ", 
+               SqrtBox[
+                RowBox[{"1", "+", 
+                 SuperscriptBox["x2", "2"]}]]}], 
+              SqrtBox[
+               RowBox[{"1", "+", 
+                SuperscriptBox["solx1p", "2"]}]]]}], ")"}]}]], " ", "*", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"solx1p", "^", "3"}], "/", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{"solx1p", "^", "2"}], "+", "1"}], "]"}]}], " ", 
+         RowBox[{"1", "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Exp", "[", 
+             RowBox[{
+              RowBox[{"1", "/", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"11.24", "/", 
+                  RowBox[{"(", 
+                   RowBox[{"2", " ", "\[Pi]"}], ")"}]}], " ", "y"}], ")"}]}], 
+              " ", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{"1", "+", 
+                RowBox[{"solx1p", "^", "2"}]}], "]"}]}], "]"}], "+", "1"}], 
+           ")"}]}], " ", 
+         RowBox[{
+          RowBox[{"x2", "^", "3"}], "/", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{"x2", "^", "2"}], "+", "1"}], "]"}]}], " ", 
+         RowBox[{"1", "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Exp", "[", 
+             RowBox[{
+              RowBox[{"1", "/", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"11.24", "/", 
+                  RowBox[{"(", 
+                   RowBox[{"2", " ", "\[Pi]"}], ")"}]}], " ", "y"}], ")"}]}], 
+              " ", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{"1", "+", 
+                RowBox[{"x2", "^", "2"}]}], "]"}]}], "]"}], "+", "1"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"TableForm", "@", 
+       RowBox[{"Timing", "@", 
+        RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Table", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"X", " ", 
+             RowBox[{"NIntegrate", "[", 
+              RowBox[{"int", ",", 
+               RowBox[{"{", 
+                RowBox[{"x2", ",", "0", ",", 
+                 RowBox[{"Sqrt", "[", 
+                  RowBox[{
+                   RowBox[{"X", "^", "2"}], " ", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"X", "^", "2"}], "-", "1"}], ")"}], "/", "4"}]}], 
+                  "]"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"cos1", ",", "0", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"cos2", ",", "0", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"p1", ",", "0", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"p2", ",", "0", ",", "1"}], "}"}], ",", 
+               RowBox[{"Method", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"method", ",", 
+                  RowBox[{"\"\<Partitioning\>\"", "\[Rule]", "partlist"}]}], 
+                 "}"}]}], ",", 
+               RowBox[{"AccuracyGoal", "\[Rule]", "acgoal"}], ",", 
+               RowBox[{"PrecisionGoal", "\[Rule]", "prgoal"}]}], 
+              "\[IndentingNewLine]", "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"X", ",", "2", ",", "Xmax", ",", "dX"}], "}"}]}], "]"}], 
+          ",", 
+          RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+          RowBox[{"Joined", "->", "True"}]}], "\[IndentingNewLine]", 
+         "]"}]}]}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"mcplot", "[", 
+  RowBox[{"1", ",", "0", ",", "2", ",", "1", ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1"}], "}"}], ",", "9", 
+   ",", "20", ",", "\"\<AdaptiveQuasiMonteCarlo\>\""}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.456652223608515*^9, 3.456652448271703*^9}, {
+  3.456652547469341*^9, 3.456652574747701*^9}, {3.456652608103268*^9, 
+  3.456652702829284*^9}, {3.456652766052619*^9, 3.456652784686783*^9}, {
+  3.456652859992219*^9, 3.456652917469061*^9}, {3.456653290360589*^9, 
+  3.456653331736485*^9}, {3.456653367434371*^9, 3.456653376776757*^9}, {
+  3.456653447548128*^9, 3.456653521218414*^9}, {3.456653557742274*^9, 
+  3.456653658336775*^9}, {3.456653710016304*^9, 3.456653874973676*^9}, {
+  3.456653912735347*^9, 3.456653942684643*^9}, {3.456654016667611*^9, 
+  3.456654029215032*^9}, {3.456654134870406*^9, 3.456654237648387*^9}, {
+  3.45665483424619*^9, 3.456654952494236*^9}, {3.456655045761131*^9, 
+  3.456655103474167*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"6.436402000000028`"},
+     {
+      GraphicsBox[{{}, {}, 
+        {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxTTMoPSmViYGAQBWIQDQEf7BlQgcOVS6xb6ibCxDkc0r6fq7sl8B/KF3BY
+MHPTlLiPbA4QvoiDyam6xxpNvFC+hIOFwUPxDElBKF/GwZjtVc8kCWEoX8HB
+V/G/2V8ZGF/JwdY+/3nzMhhfxYGjbnP/lU9CUL6aQ/8zTT/RewJQvobDDme1
+uXm8/FC+loON48WKExe4oXwdh0ahjZ/dP3FC+XoOM5dHeb0LYofyDRzUAhis
+beJYoXxDh6YPklfqWJigfCOHB6nhPkXSDFC+sYO769rZHql/oP43cdAzYtCV
++PcNyjd1iH1m9//8ls/2AOJ5TmE=
+          "]]}},
+       AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+       Axes->True,
+       AxesOrigin->{0, 0},
+       PlotRange->{{0, 21.}, {0., 4.912612548985462}},
+       PlotRangeClipping->True,
+       PlotRangePadding->{
+         Scaled[0.02], 
+         Scaled[0.02]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.456653671183034*^9, 3.456653743770336*^9}, {
+   3.456653824243491*^9, 3.45665386320635*^9}, {3.456653930552184*^9, 
+   3.456653959073939*^9}, 3.456654037978024*^9, {3.456654149703378*^9, 
+   3.45665421982074*^9}, 3.456654583593936*^9, {3.456654846467779*^9, 
+   3.456654913228399*^9}, {3.456654944147885*^9, 3.456654964763112*^9}, {
+   3.456655051470786*^9, 3.456655111516481*^9}}]
+}, Open  ]]
+},
+WindowSize->{1280, 977},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 9684, 250, 629, "Input"],
+Cell[10254, 274, 1686, 41, 176, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

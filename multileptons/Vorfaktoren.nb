@@ -1,0 +1,350 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11437,        341]
+NotebookOptionsPosition[     10467,        304]
+NotebookOutlinePosition[     10803,        319]
+CellTagsIndexPosition[     10760,        316]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"energy", " ", "per", " ", "unit", " ", "time", " ", "and", " ", 
+    RowBox[{"surface", "/", 
+     RowBox[{"m", "^", "4"}]}]}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"JTH", "[", 
+      RowBox[{"y_", ",", "x0_"}], "]"}], ":=", 
+     RowBox[{"NIntegrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"x", "^", "3"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Exp", "[", 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Pi]", "/", 
+              RowBox[{"(", 
+               RowBox[{"11.24", " ", "y"}], ")"}]}], " ", "x"}], "]"}], "+", 
+           "1"}], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{
+          RowBox[{"x", "^", "3"}], "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Exp", "[", 
+             RowBox[{"2", " ", 
+              RowBox[{"\[Pi]", "/", 
+               RowBox[{"(", 
+                RowBox[{"11.24", " ", "y"}], ")"}]}], " ", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{"1", "+", 
+                RowBox[{"x", "^", "2"}]}], "]"}]}], "]"}], "+", "1"}], 
+           ")"}]}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "x0"}], "}"}], ",", 
+       RowBox[{"MaxRecursion", "\[Rule]", "100"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"prefactor", "*", 
+     RowBox[{"m", "^", "3"}], " ", "to", " ", "multiplied", " ", "with", " ", 
+     "fermion", " ", "spectrum", " ", "to", " ", "yield", " ", "the", " ", 
+     "total", " ", "number", " ", "of", " ", "fermions"}], "*)"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"prefactor", "[", 
+      RowBox[{"y_", ",", 
+       RowBox[{"delta_:", " ", "1"}], ",", "ECOM_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"\[Pi]", "^", "2"}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"delta", " ", "ECOM"}], ")"}], "/", 
+       RowBox[{"(", " ", 
+        RowBox[{"JTH", "[", 
+         RowBox[{"y", ",", "100"}], "]"}], ")"}]}]}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.456835588284836*^9, 3.456835600211837*^9}, {
+   3.456835634912595*^9, 3.456835696036183*^9}, {3.456835732289513*^9, 
+   3.456835784282984*^9}, 3.456835901281157*^9, 3.4568360063779*^9, {
+   3.458897936708053*^9, 3.45889799426233*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", "ECOM", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ECOM", "=", 
+      RowBox[{"10", "/", ".511"}]}], ";", 
+     RowBox[{"(*", 
+      RowBox[{"single", " ", "electreon", " ", "emission", " ", "GSI"}], 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "ECOM", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"TableForm", "@", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<\[Delta]/y\>\"", ",", "1", ",", ".5"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", 
+          RowBox[{"prefactor", "[", 
+           RowBox[{"1", ",", "1", ",", "ECOM"}], "]"}], ",", 
+          RowBox[{"prefactor", "[", 
+           RowBox[{".5", ",", "1", ",", "ECOM"}], "]"}]}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{".5", ",", 
+          RowBox[{"prefactor", "[", 
+           RowBox[{"1", ",", ".5", ",", "ECOM"}], "]"}], ",", 
+          RowBox[{"prefactor", "[", 
+           RowBox[{".5", ",", ".5", ",", "ECOM"}], "]"}]}], "}"}]}], 
+       "}"}]}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.45683543627424*^9, 3.456835576559748*^9}, {
+  3.456835974634523*^9, 3.456836015107216*^9}, {3.456836048819903*^9, 
+  3.456836118815297*^9}, {3.456836153815375*^9, 3.456836178940882*^9}, {
+  3.456836244411378*^9, 3.456836290213796*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\[Delta]/y\"\>", "1", "0.5`"},
+    {"1", "1.1393211596345891`", "19.7618364072566`"},
+    {"0.5`", "0.5696605798172946`", "9.8809182036283`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.458898108504263*^9}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\[Delta]/y\"\>", "1", "0.5`"},
+    {"1", "4.557284638538356`", "79.04734562902638`"},
+    {"0.5`", "2.278642319269178`", "39.52367281451319`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.456835578378025*^9, 3.456835988411911*^9, 
+  3.456836120246195*^9, 3.456836221682819*^9, 3.456836291953721*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\"\<\[Delta]/y\>\"", "1", "0.5`"},
+    {"1", "4.557284638538356`", "79.04734562902638`"},
+    {"0.5`", "2.278642319269178`", "39.52367281451319`"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", "ECOM", "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ECOM", "=", 
+     RowBox[{
+      RowBox[{"10", "^", "6"}], "/", "105.6"}]}], ";", 
+    RowBox[{"(*", 
+     RowBox[{"single", " ", "electreon", " ", "emission", " ", "GSI"}], 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", "ECOM", "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"TableForm", "@", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<\[Delta]/y\>\"", ",", "1", ",", ".5"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", 
+         RowBox[{
+          RowBox[{"prefactor", "[", 
+           RowBox[{"1", ",", "1", ",", "ECOM"}], "]"}], "^", "2"}], ",", 
+         RowBox[{
+          RowBox[{"prefactor", "[", 
+           RowBox[{".5", ",", "1", ",", "ECOM"}], "]"}], "^", "2"}]}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{".5", ",", 
+         RowBox[{
+          RowBox[{"prefactor", "[", 
+           RowBox[{"1", ",", ".5", ",", "ECOM"}], "]"}], "^", "2"}], ",", 
+         RowBox[{
+          RowBox[{"prefactor", "[", 
+           RowBox[{".5", ",", ".5", ",", "ECOM"}], "]"}], "^", "2"}]}], 
+        "}"}]}], "}"}]}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.456836303571026*^9, 3.456836391034868*^9}}],
+
+Cell[BoxData["9469.69696969697`"], "Print",
+ CellChangeTimes->{{3.456836371257574*^9, 3.456836393561694*^9}, 
+   3.458901966434832*^9}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\[Delta]/y\"\>", "1", "0.5`"},
+    {"1", "303952.8993125128`", "9.144681066561629`*^7"},
+    {"0.5`", "75988.2248281282`", "2.2861702666404072`*^7"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.458901967494377*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\"\<\[Delta]/y\>\"", "1", "0.5`"},
+    {"1", "4.863246389000202`*^6", "1.46314897064986`*^9"},
+    {"0.5`", "1.2158115972500504`*^6", "3.65787242662465`*^8"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Input",
+ CellChangeTimes->{3.458901940567252*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"303952.8993125128`", " ", "16"}]], "Input",
+ CellChangeTimes->{{3.458902051036667*^9, 3.458902060218313*^9}}],
+
+Cell[BoxData["4.863246389000204`*^6"], "Output",
+ CellChangeTimes->{3.458902061963651*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"75988.2248281282`", " ", "16"}]], "Input",
+ CellChangeTimes->{{3.4589020859743*^9, 3.458902093654336*^9}}],
+
+Cell[BoxData["1.215811597250051`*^6"], "Output",
+ CellChangeTimes->{3.458902095342338*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"303952.8993125128`", " ", ".07"}]], "Input",
+ CellChangeTimes->{{3.458902718969637*^9, 3.458902725262253*^9}, {
+  3.45890276437206*^9, 3.458902773158296*^9}, {3.458903691923988*^9, 
+  3.458903698750256*^9}}],
+
+Cell[BoxData["21276.702951875897`"], "Output",
+ CellChangeTimes->{3.458902727086512*^9, 3.458902775959112*^9, 
+  3.458903700750589*^9}]
+}, Open  ]]
+},
+WindowSize->{1280, 960},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 2352, 64, 121, "Input"],
+Cell[CellGroupData[{
+Cell[2922, 88, 1518, 35, 209, "Input"],
+Cell[4443, 125, 681, 18, 60, "Output"],
+Cell[5127, 145, 773, 19, 60, "Output"]
+}, Open  ]],
+Cell[5915, 167, 639, 17, 60, "Input"],
+Cell[CellGroupData[{
+Cell[6579, 188, 1419, 36, 187, "Input"],
+Cell[8001, 226, 135, 2, 24, "Print"],
+Cell[8139, 230, 688, 18, 82, "Output"]
+}, Open  ]],
+Cell[8842, 251, 692, 18, 60, InheritFromParent],
+Cell[CellGroupData[{
+Cell[9559, 273, 133, 2, 32, "Input"],
+Cell[9695, 277, 90, 1, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9822, 283, 130, 2, 32, "Input"],
+Cell[9955, 287, 90, 1, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10082, 293, 231, 4, 32, "Input"],
+Cell[10316, 299, 135, 2, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

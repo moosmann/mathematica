@@ -1,0 +1,525 @@
+%\usepackage{feynmf}
+%\usepackage{amssymbol}
+%\renewcommand{\baselinestretch}{2}\normalsize
+%\input{tcilatex}
+%\input{tcilatex}
+
+
+\documentclass[12pt,preprint]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{graphics}
+%\usepackage{epsfig}
+\usepackage[dvips]{graphicx}
+%\usepackage{psfig}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2606}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Saturday, September 09, 2006 22:24:09}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\renewcommand{\vec}[1]{{\bf #1}}
+\setlength{\baselineskip}{20mm}
+\textwidth 15.0 true cm
+\textheight 22.0 true cm
+\headheight 0 cm
+\headsep 0 cm
+\topmargin 0.4 true in
+\oddsidemargin 0.25 true in
+\newcommand{\eqb}{\begin{equation}}
+\newcommand{\eqe}{\end{equation}}
+\newcommand{\dmb}{\begin{displaymath}}
+\newcommand{\dme}{\end{displaymath}}
+\newcommand{\pd}{\partial}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\eab}{\begin{eqnarray}}
+\newcommand{\eae}{\end{eqnarray}}
+\newcommand{\ra}{\right\rangle}
+\newcommand{\la}{\left\langle}
+\newcommand{\e}{\mbox{e}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\sgn}{\text{sgn}\,}
+\newcommand{\munu}{{\mu\nu}}
+\newcommand{\ad}{{\dot{\alpha}}}
+\newcommand{\bd}{{\dot{\beta}}}
+\newcommand{\La}{\Lambda}
+\setlength{\unitlength}{1cm}
+%\input{tcilatex}
+
+\begin{document}
+
+
+\begin{titlepage}
+\begin{flushright} 
+\end{flushright}
+\vspace{0.6cm}
+
+\begin{center}
+\Large{Center-vortex loops with one selfintersection}
+
+\vspace{1.5cm}
+
+\large{Julian Moosmann and Ralf Hofmann}
+\end{center}
+\vspace{1.5cm} 
+
+\begin{center}
+{\em Institut f\"ur Theoretische Physik\\ 
+Universit\"at Karlsruhe (TH)\\ 
+Kaiserstr. 12\\ 
+76131 Karlsruhe, Germany}
+\end{center}
+\vspace{1.5cm}
+
+\begin{abstract}
+
+\end{abstract} 
+
+\end{titlepage}
+
+\section{Introduction}
+
+The idea of a nontrivial ground state being responsible 
+for the emergence of `elementary' particles is a rather old 
+one: Already Lord Kelvin proposed 
+that atoms and molecules should be considered 
+knotted lines of vortices representing distortions in 
+a universal medium (or ground state) -- the ether \cite{Kelvin}. As we know now, 
+the physis of atoms and molecules turned out to 
+be describable in terms of a much more efficient and elegant framework: Quantum
+mechanics. The agent responsible for the 
+chemical bond -- Kelvin's electron -- considered a spinning point 
+particle in quantum mechanics, and this yields an 
+excellent description in atomic physics, 
+collider physics, and the bulk of situations in 
+condensed matter physics.  
+
+There are, however, discrepancies with the 
+concept of the electron being a point particle, and there are 
+exceptional experimental situations pointing to the limitations of this 
+concept to describe reality. As for the former, we have in 
+mind the old problem of a diverging classical 
+selfenergy not solved in quantum 
+electrodynamics where the electron mass is introduced 
+as a free parameter whose running with 
+resolution depends on experimental input. On the other 
+hand, the two-dimensional dynamics of strongly 
+correlated electrons in condensed matter physics signals  
+the relevance of nonlocal effects possibly related to the 
+nontrivial anatomy of the electron 
+\cite{Muller1986,Anderson2005}. Also, recent 
+high-temperature plasma experiments indicate 
+unexpected explosive behavior not unlikely 
+related to an unconventional mechanism for the 
+emergence of leptons, see \cite{Zpinch} and 
+references therein. 
+
+Recent developments in understanding the 
+confining phase of an SU(2) Yang-Mills 
+theory suggest that Kelvin's 
+ideas may actually be realized in 
+Nature, see \cite{FaddeevNiemi}. While the authors of 
+\cite{FaddeevNiemi} construct a plausible effective low-energy action for the 
+4D SU(2) Yang-Mills theory with solutions to the associated field
+equations representing closed confining strings 
+knotted into stable solitons 
+the thermodynamical approach of 
+\cite{Hofmann2005} relates the emergence 
+of magnetic center-vortex loops 
+to discontinuous phase changes 
+of a complex order parameter 
+across the (downward) Hagedorn 
+transition and the fact that no magnetic 
+charges exist in the confining low-temperature 
+phase where these flux lines could end. Also, it was discussed in
+\cite{Hofmann2005} how the 
+locations of selfintersection represent 
+isolated, spinning magnetic charges. 
+
+In our previous article \cite{MH2008} we have 
+investigated 
+the sector with $N=0$ selfintersections by 
+considering a resolution dependent 
+ensemble average with a weight-functional for 
+the individual center-vortex loop which is 
+defined purely in terms of the planar curves's 
+geometry. The resolution dependence of the 
+latter, in turn, is determined by a 
+curve-shrinking equation (heat-equation) \cite{GageHamilton,Grayson} 
+whose validity to describe the spatial 
+coarse-graining of a single curve is motivated from considerations
+relating local curvature with the direction and speed of `motion' of the associated 
+line-segment. The requirement that 
+the partition function over a given ensemble of 
+planar curves is invariant under a change of 
+the resolution then yields the 
+renormalization-group evolution 
+of the weight-functional which is written as the exponential 
+of an `action'. Here the term `action' is slightly misleading 
+since we do not aim at describing the time-evolution of the 
+system by demanding stationarity of the `action' under curve variation. 
+To do the latter, a model, which 
+relates resolution and time, needs to be introduced. We thus 
+regard resolution as the more fundamental quantity than time 
+to describe subatomic systems. Our observation 
+is that the weight exhibits a transition 
+towards dilational invariance after a 
+finite, critical decrease of resolution. 
+On average, center-vortex loops are shrunk to circular 
+points for a resolution less than the critical value which defacto removes them 
+from the spectrum and thus generates an asymptotic mass gap\footnote{Center-vortex
+  loops with $N>0$ are massive \cite{Hofmann2005,Hofmann2007}.}. Knowing
+the evolution of the weight-functional, one is in a position to compute
+the resolution dependence of `observables' as ensemble averages of the
+associated (nonlocal or local) `operators'. As for the evolution 
+of the initially sharp center-of-mass position, 
+we observe a spread of the variance with decreasing resolution
+saturating at a finite value. This is 
+similar to the unitary free-particle evolution of a position eigenstate
+in quantum mechanics.      
+
+The purpose of the present article is to extend the procedure 
+of \cite{MH2008} to the case of $N=1$. In this case, there is a 
+singled-out point on the curve: the location of 
+the selfintersection where practically the entire mass of the soliton
+resides \cite{Hofmann2005}. Setting the Yang-Mills 
+scale of the SU(2) theory equal to the electron mass $m_e=511\,$keV,
+which in turn determines the mass of the intersection point, 
+we interprete this soliton as the electron or positron 
+\cite{ZPinch,Hofmann2007}. In the presence of a static 
+electric or magnetic background field it is physically possible to lift
+the two-fold degeneracy w.r.t. the two possible directions of
+center-flux: The soliton exhibits a two-fold spin degeneracy. 
+Notice that as long 
+as both wings of center flux are of finite size the 
+position of the intersection point can be shifted 
+at almost no cost of energy. In particular, 
+if at the intersection the inner 
+angle $\theta$ between in- and out-going 
+center-flux is sufficiently small then a motion along the 
+normal to the flux line can easily generate a velocity 
+of the intersection point exceeding the speed of light, see
+Fig.\,\ref{Fig-1}. Recall, that the path-integral formulation of quantum
+mechanics admits superluminal motion.    
+
+The paper is organized as follows. 
+
+\section{Conceptual framework}
+
+The transition from the non-selfintersecting to the selfintersecting CVL sector 
+is proceeded by twisting of non-selfinteresecting curves.
+Since in a one-fold twisted curve the direction of the fluxes of each loop 
+are parallel at the intersection point, a localized magnetic (anti)monopole 
+can't emerge because no kinetic energy from the (anti)monopoles which are 
+circulating in the tube can be transferred to the monopole at the intersection. 
+Thus a second twist is needed to create a (anti)monopole, as shown in Fig.\, \ref{Fig-1}.
+To localize the magnetic monopole in the intermediate loop the repulsion due to Biot-Savart law has to be overcome.
+Despite the signifcant physical distinction there's no need to distinguish 
+between a one- and two-fold intersection, since the direction of the flux is irrelevant in the process of curve shrinking.
+ 
+%***********************
+\begin{figure}[h]
+\centering
+\vspace{3cm}
+\special{psfile=Fig-1.eps angle=0 voffset=5
+         hoffset=50 hscale=100 vscale=100}
+\caption{\protect{\label{Fig-1}} Two-fold intersected curve enclosing a magnetic (anti)monopole. The arrows indicate the direction of the flow of the magnetic (anti)monopoles which are circulating along the flux tube.}
+\end{figure}
+%************************ 
+
+Notice that by immersing an $N=0$ CVL of an isolated SU(2) Yang-Mills theory into a 
+flat 2D surface at $m_D<\infty$, $d>0$, a hypothetical observer measuring a positive (negative) 
+curvature of a sector of the vortex line experiences more (less)
+negative pressure in the intermediate vicinity of this curve sector 
+leading to its motion towards (away from)
+the observer, see Fig.\,\ref{Fig-1}. 
+n%***********************
+\begin{figure}
+\begin{center}
+\leavevmode
+%\epsfxsize=9.cm
+\leavevmode
+%\epsffile[80 25 534 344]{}
+\vspace{6cm}
+\special{psfile=Fig-2.eps angle=0 voffset=-220
+         hoffset=-175 hscale=120  vscale=120}
+\end{center}
+\caption{\protect{\label{Fig-2}}Highly space-resolved snapshot of a CVL
+  sector. The pressure $P_i$ in the region pointed to by the normal
+  vector $\vec{n}$ is more negative than the pressure 
+$P_e$ thus leading to a motion of the sector along $\vec{n}$.}
+\end{figure}
+%************************ 
+The speed of this 
+motion will be a monotonic function of curvature. 
+On average, this shrinks the CVL. Alternatively, one may {\sl globally}
+consider the limit 
+$m_D\to\infty$,$d\to 0$,
+that is, the confining phase of an SU(2) Yang-Mills theory, 
+but now take into account the effects of an environment which 
+{\sl locally} relaxes this limit (by collisions) and thus also induces
+curve shrinking. This situation is described by the 
+following equation for a flow in the (dimensionless) parameter 
+$\tau$    
+%*********
+\eqb
+\label{CSt}
+\partial_\tau \vec{x}=\frac{1}{\sigma}\,\partial^2_s \vec{x}\,,
+\eqe
+%**********
+where $s$ is arc length, $\vec{x}$ is a point on the CVL in the plane, and 
+$\sigma$ is a string tension effectively 
+expressing the disortions induced by the environment. After a rescaling,
+$\hat{x}\equiv\sqrt{\sigma}\vec{x}$, $\xi=\sqrt{\sigma}s$,
+Eq.\,(\ref{CSt}) assumes the following form
+%*********
+\eqb
+\label{CSta}
+\partial_\tau \hat{x}(u,\tau)=\partial^2_\xi \hat{x}=k(u,\tau)\vec{n}(u,\tau)\,,
+\eqe
+%**********
+where $u$ is a (dimensionless) curve parameter, $\vec{n}$ 
+the (inward-pointing) Euclidean unit normal, $k$ the
+scalar curvature, defined as 
+%*********
+\eqb
+\label{curvdef}
+k\equiv\left|\partial^2_\xi \hat{x}\right|
+=\left|\frac{1}{|\partial_u\hat{x}|}\partial_u\left(\frac{1}{|\partial_u\hat{x}|}\partial_u\hat{x}\right)\right|\,,
+\eqe
+%**********
+$|\vec{v}|\equiv\sqrt{\vec{v}\cdot\vec{v}}$, and $\vec{v}\cdot\vec{w}$ 
+denotes the Euclidean scalar product of the vectors $\vec{v}$ and
+$\vec{w}$. In the following we resort to a slight abuse of notation by
+using the same symbol $\hat{x}$ for the functional dependence on $u$ or
+$\xi$. 
+
+
+We now consider curves with one selfintersection, so called figure eights 
+which are defined to have only one double point and winding number zero $\int k ds = 0$.
+In contrast to the non-intersecting case where smooth curves embedded in a plane 
+shrink to a point under the flow for $\tau \nearrow T$, so that 
+the limiting shape is a circle and the isoperimetric ratio converges to $4\pi$, 
+in the case of figure eights the isoperimetric ratio is bounded for 
+$\tau \nearrow T$ only if the two areas enclosed by the curve are of unequal length. 
+The curve stays smooth until the flow encounters a singularity 
+that is when the area of one of the loops vanishes \cite{GraysonII}. As in the 
+twisted case where the derivative of the area with respect to the flow parameter $\tau$ 
+is given by $2\pi$ there exists an invariant under the flow but which is now given 
+by the difference of the two areas enclosed by the curve. The $\tau$ derivative 
+of the total area now is bounded between $-4\pi$ and $-2\pi$. 
+
+We now wish to interprete curve-shrinking as a Wilsonian
+renormalization-group flow taking place in the $N=1$ 
+planar CVL sector. A partition function, 
+defined as a statistical average (according to a suitably defined weight) over $N=1$ 
+CVLs, is to be left invariant under a decrease of the 
+resolution determined by the flow parameter $\tau$. 
+Notice that, physically, $\tau$ is interpreted as a strictly
+monotonic decreasing (dimensionless) 
+function of a ratio $\frac{Q}{Q_0}$ where $Q$ ($Q_0$) are mass 
+scales associated with an actual (initial) resolution applied to the
+system. 
+
+To device a geometric ansatz for the 
+effective action $S=S[\hat{x}(\tau)]$, which is a functional of the
+curve $\hat{x}$ representable in terms 
+of integrals over local densities in $\xi$ (reparametrization
+invariance), 
+the following reflection on symmetries is in order.  
+(i) scaling symmetry $\hat{x}\to \lambda\hat{x}\,,\ \ \lambda\in{\mathbf
+  R}_+$: For both, $\lambda\to\infty$ and $\lambda\to 0$, implying
+$\lambda L\to\infty$ and $\lambda L\to 0$ at fixed $L$, the action $S$ should 
+be invariant under further finite rescalings (decoupling of the fixed
+length scale $\sigma^{-1/2}$), 
+(ii) Euclidean point symmetry of the plane (rotations, translations
+and reflections about a given axis): Sufficient but not necessary for
+this is a 
+representation of $S$ in terms of integrals over 
+scalar densities w.r.t. these 
+symmetries. That is, the action density should be expressible as a
+series involving products of Euclidean scalar products of $\frac{\partial^n}{\partial
+    \xi^n}\hat{x}\,,\ \ n\in\mathbf{N}_+\,,$ or constancy. 
+However, an exceptional scalar integral over a nonscalar density can be 
+deviced. Consider the area $A$, calculated as 
+%*********
+\eqb
+\label{area}
+A=\left|\frac12\,\int_0^{2\pi} d\xi\,\hat{x}\cdot\vec{n}\right|\,.
+\eqe
+%*********  
+The density $\hat{x}\cdot\vec{n}$ in Eq.\,(\ref{area}) is not a scalar under
+translations. 
+
+We now resort to a 
+factorization ansatz as 
+%*********
+\eqb
+\label{effectactdef}
+S=F_c\times F_{nc}\,,
+\eqe
+%**********
+where in addition to
+Euclidean point symmetry $F_c$ ($F_{nc}$) is (is not) invariant 
+under $\hat{x}\to \lambda\hat{x}$. In principle, 
+infinitely many operators can be defined 
+to contribute to $F_c$. Since the 
+evolution generates circles for $\tau\nearrow T$ higher derivatives of 
+$k$ w.r.t. $\xi$ rapidly converge to zero \cite{GageHamilton}. We expect this to be true 
+also for Euclidean scalar products involving higher 
+derivatives $\frac{\partial^n}{\partial \xi^n}\hat{x}$. 
+To yield conformally invariant expressions such integrals need to be 
+multiplied by powers of $\sqrt{A}$ and/or $L$ or the inverse of 
+integrals involving lower derivatives. At this stage, we are 
+not capable of constraining the expansion in derivatives by additional physical or
+mathematical arguments. To be pragmatic, 
+we simply set $F_c$ equal to the isoperimetric ratio:
+%*********
+\eqb
+\label{explFc}
+F_c(\tau)\equiv\frac{L(\tau)^2}{A(\tau)}\,.
+\eqe
+%*********
+We conceive the nonconformal factor $F_{nc}$ in $S$ as a formal expansion in inverse powers of 
+$L$. Since we regard the renormalization-group evolution of the
+effective action as induced by the flow of an ensemble of curves, where the evolution of each member is
+dictated by Eq.\,(\ref{CSta}), we allow for an explicit $\tau$
+dependence of the coefficient $c$ of the lowest nontrivial power
+$\frac{1}{L}$. In principle, this sums up the contribution to $F_{nc}$ of certain 
+higher-power operators which do not exhibit an explicit $\tau$
+dependence. Hence we make the following ansatz
+%********
+\eqb
+\label{explFnc}
+F_{nc}(\tau)=1+\frac{c(\tau)}{L(\tau)}\,.
+\eqe
+%*******
+The initial value $c(\tau=0)$ is determined from a physical 
+boundary condition such as the mean length $\bar{L}$ at $\tau=0$ which determines
+the mean mass $\bar{m}$ of a CVL as $\bar{m}=\sigma\bar{L}$. 
+
+
+\section{Results of simulation}
+
+The ensembles $E_M$ under consideration are build up of the $M$ initial curves 
+depicted in Fig.\,\ref{Fig-2}, where all curves have a total area of $200\pi$. Since the $\tau$ value $T$ at which one 
+of the areas enclosed by the curve diminishes and the flow encounters 
+a singularity varies from curve to curve, we now considers several ensembles $E_M$ for $M$ fixed with differently ordered curves. In the first class of ensembles the curves are ordered with decreasing $T$. The others classes are in arbritrary order.
+
+%***********************
+\begin{figure}[h]
+\centering
+\vspace{12cm}
+\special{psfile=Fig-3.eps angle=0 voffset=5
+         hoffset=10 hscale=40 vscale=40}
+
+\caption{\protect{\label{Fig-3}}Initial curves contributing to the ensembles $E_M$}
+\end{figure}
+%************************ 
+
+As before
+
+
+\section{Summary and Conclusion}
+
+          
+
+ 
+\section*{Acknowledgments}
+We would like to thank Markus Schwarz for useful conversations. 
+
+\begin{thebibliography}{10}
+
+\bibitem{Thomson}
+W. T. Kelvin and P. G. Tait, {\sl Treatise on Natural Philosophy}, 2
+vols., Cambridge University Press, 1867.  
+
+\bibitem{FaddeevNiemi}
+L. Faddeev and A. J. Niemi, Nature {\bf 387}, 58 (1997).\\ 
+L. Faddeev and A. J. Niemi, Phys. Rev. Lett. {\bf 82}, 1624 (1999).\\ 
+L. Faddeev and A. J. Niemi, Phys. Lett. B {\bf 525}, 195 (2002).\\ 
+L. Faddeev and A. J. Niemi, Nucl. Phys. B {\bf 776}, 38 (2007).
+
+\bibitem{Hofmann2005}
+R. Hofmann, Int. J. Mod. Phys. A{\bf 20}, 4123 (2005);
+Erratum-ibid.A{\bf 21}, 6515 (2006).
+
+\bibitem{GHS2006}
+F. Giacosa, R. Hofmann, M. Schwarz, Mod. Phys. Lett. A{\bf 21}, 2709
+(2006).\\ 
+R. Hofmann, Mod. Phys. Lett. A{\bf 22} 2657 (2007). 
+
+\bibitem{Hofmann2007}
+R. Hofmann, arXiv:0710.0962 [hep-th].
+
+\bibitem{NO}
+H. B. Nielsen and P. Olesen, Nucl. Phys. B{\bf 61}, 45 (1973).
+
+\bibitem{tHooft1983}
+G. 't Hooft, Nucl. Phys. B{\bf 138}, 1 (1978). 
+
+\bibitem{Smith}
+S. Smith, M. E. Broucke, and B. A. Francis, in proc. 44th IEEE
+Conference on Decision and Control, and European Control Conference
+2005, Seville, Spain, Dec. 12-15 (2005). 
+
+\bibitem{GageHamilton}
+M. Gage and R. S. Hamilton, J. Differential Geometry {\bf 23}, 69
+(1986). 
+
+\bibitem{Grayson}
+M. A. Grayson, J. Differential Geometry {\bf 26}, 285
+(1987). 
+
+\bibitem{PerelmanI}
+G. Perelman, math/0211159.
+
+\bibitem{PerelmanII}
+G. Perelman, math/0303109.
+
+\bibitem{PerelmanIII} 
+G. Perelman, math/0307245. 
+
+\bibitem{Thurston}
+W. P. Thurston, Bull. Amer. Math. Soc. (N.S.) {\bf 6}, no. 3, 357
+(1982). 
+
+\bibitem{KKG}
+H. V. Klapdor-Kleingrothaus and I. V. Krivosheina,
+Mod. Phys. Lett. A{\bf 21}, 1547 (2006).\\ 
+H. V. Klapdor-Kleingrothaus, Int. J. Mod. Phys. D{\bf 13}, 2107
+(2004).\\ 
+H. V. Klapdor-Kleingrothaus, I.V. Krivosheina, A. Dietz, and 
+O. Chkvorets, Phys. Lett. B{\bf 586} 198 (2004).
+
+\bibitem{BosiCavalleri2002}
+L. Bosi and G. Cavalleri, Nuovo Cim. (note brevi) {\bf 117} B, 243 (2002).  
+
+\bibitem{Zpinch}
+F. Giacosa, R. Hofmann, and M. Schwarz, Mod. Phys. Lett. A{\bf 21}, 2709
+(2006).
+
+\bibitem{GiacosaHofmann2005}
+F. Giacosa and R. Hofmann, Eur. Phys. J. C{\bf 50}, 635 (2007)
+[hep-th/0512184].
+
+\bibitem{GraysonII}
+M. A. Grayson, Invent. math. {\bf 96}, 177 (1989).
+
+\bibitem{Muller1986} 
+J. G. Bednorz and K. A. M\"uller, Z. Phys. B{\bf 64}, 189 (1986). 
+
+\bibitem{Anderson2005}
+P. W. Anderson, arXiv:cond-mat/0510053v2.\\ 
+P. W. Anderson, Physica C{\bf 460-462}, 3 (2007). 
+
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,472 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     19209,        463]
+NotebookOptionsPosition[     18731,        442]
+NotebookOutlinePosition[     19066,        457]
+CellTagsIndexPosition[     19023,        454]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"list", ",", "l", ",", "flist", ",", "fclist", ",", "fslist"}], 
+    "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"list", "=", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "10", ",", "0", ",", "0", ",", 
+       "0", ",", "0"}], "}"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"l", "=", 
+     RowBox[{"Length", "@", "list"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"flist", "=", 
+     RowBox[{"Fourier", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"fclist", "=", 
+     RowBox[{"FourierDCT", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"fslist", "=", 
+     RowBox[{"FourierDST", "@", "list"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"TableForm", "@", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"ListPlot", "@", "list"}], "}"}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"ListPlot", "@", 
+          RowBox[{"Re", "@", "flist"}]}], ",", 
+         RowBox[{"ListPlot", "@", 
+          RowBox[{"Im", "@", "flist"}]}], ",", 
+         RowBox[{"ListPlot", "@", 
+          RowBox[{"Abs", "@", "flist"}]}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"ListPlot", "@", "fclist"}], ",", 
+         RowBox[{"ListPlot", "@", 
+          RowBox[{"Abs", "@", "fclist"}]}], ",", 
+         RowBox[{"ListPlot", "@", "fslist"}], ",", 
+         RowBox[{"ListPlot", "@", 
+          RowBox[{"Abs", "@", "fslist"}]}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"ListPlot", "@", 
+         RowBox[{"FourierDCT", "[", 
+          RowBox[{
+           RowBox[{"PadRight", "[", 
+            RowBox[{
+             RowBox[{"Take", "[", 
+              RowBox[{"fclist", ",", "6"}], "]"}], ",", "l", ",", "0"}], 
+            "]"}], ",", "3"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+      "}"}]}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.453527972431798*^9, 3.453528139980113*^9}, {
+  3.453529399520874*^9, 3.45352953638202*^9}, {3.453529671649081*^9, 
+  3.453529786933823*^9}, {3.453529944741597*^9, 3.453530006465854*^9}, {
+  3.453530051197176*^9, 3.453530063170552*^9}, {3.4535301276048*^9, 
+  3.453530185399606*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 0.}, {2., 0.}, {3., 0.}, {4., 0.}, {5., 10.}, {6., 
+        0.}, {7., 0.}, {8., 0.}, {9., 0.}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 3.333333333333333}, {2., -3.132308735953027}, {3., 
+        2.5534814770632597`}, {4., -1.6666666666666665`}, {5., 
+        0.5788272588897678}, {6., 0.5788272588897678}, {
+        7., -1.6666666666666665`}, {8., 2.5534814770632597`}, {
+        9., -3.132308735953027}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True], 
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 0.}, {2., 1.1400671444188955`}, {
+        3., -2.142625365621797}, {4., 2.886751345948128}, {
+        5., -3.282692510040693}, {6., 3.282692510040693}, {
+        7., -2.886751345948128}, {8., 2.142625365621797}, {
+        9., -1.1400671444188955`}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True,
+      ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJzNVk1IG0EUfubHpq0tKVgI1J9YiqXgQUuhFXJJCy0KOWjpoTE5hBBUorSo
+/UNiQUKpIlJk6aEuQQv2UPASGm/mIngRcsmhB8EUPOTgYQ85bKGH6czb3clk
+d5NKf6wJk8zM+5n3vnnvzQvFZsYSk7GZ8XjM/2Aq9nRsPD7tv/9kim45mwDg
+Cx2jXqDz73DmG3ReIgScAIR+YI0OsNtwADyiv4XIoJnjIR2uQqS/0l8pRAZs
+qbsBgeqhP24lOry4NJQM5d6Dy1AOzt1AIUD/q2y5rVmFkHLAd8jYao0CZ24L
+2MfJxkYrUhyMS82An/2bJc6zDSkbPtKIlPYCXbrOiGeZoeWAXJxe3rglHvZc
+9K+bm6bm5QohasYTBAu34W83V5wMLQ1NL88qmrMvBWe7GyC+Xo/2x8w30fFJ
+7o1c8c53XaNfV403vaLvE5yblOI9pESIkrJyG75PWO6oWbsjJTqrqBk34t8n
+AIEC59iGkgrvHexbbxzvr/C4743d5aJh5TYpSy8lD349rNaF+wofsTtI91oV
+nwz8q4i5U8gBuQIgF5WobuyqiLaDw0HFS4wiqPogIu2ohzTbJyV3rQkcb7sD
+6HSt0bkNie2mQPIjvSQXATafdTDiwX68RcrGe3Z9gOttNXwkF+Mt21+h1YDF
+pUTTXu882k0x6TDF21XzgYMDhVe0RLTRA5HXd3jwg619O5pO8QY6MLow/rQK
+4f2ImDkYbuU25LnClHhiah7jSDcA/GpGjyuL0k4hZNncldtiFgAu3ABSVs2n
+vTcSmqbwXtpL173Dn7kmenqXENmoj4ZxCXQVvp2NW74d36GBmpQdXsSxYjWm
+3ZQF6KWaYYGmKUuGNmmpJSVqLCrzBJUUA5aWMXtlQt7oVqJSFFZSyZC0Eu+R
+stpaLiYn2aBrwbm6mXGsrLmIWfOObV8g5BNAk5nDbZrTxABgidEsEOrN3cfg
++V+yjkae6oyYyqfB2L/h6D998o7JbF+aUfi3qqId0YnJSMP6dSNJllL8OZj7
+JafxHMwR+0qKpUCv/XOnAuXapqPmta7TYaAsa6iMKu42E00NBKUtINKXSYMG
+4q2INH+JrN3Egohzla9Oa7EgAG6prSfS5d1D1yNCWItdN5cIiu6PcO46zXdQ
+BGGEw1ptuinjXcH1Kku19bZeqG3rXQ2V2m6bujaKrt3h4kKDzcUTol+3zTgl
+RD8MqqaZ224RQoug6Seev3im\
+\>"]], 
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 3.333333333333333}, {2., 3.3333333333333326`}, {3., 
+        3.3333333333333326`}, {4., 3.3333333333333326`}, {5., 
+        3.333333333333333}, {6., 3.333333333333333}, {7., 
+        3.3333333333333326`}, {8., 3.3333333333333326`}, {9., 
+        3.3333333333333326`}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True,
+      ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJzNVj9IG1EYf+YuGorVK0S4IdTEuhTS1oJDhSwuLRUyROhg0CEcgiFIi9pB
+QhYJHSQ4yNHpyFAILQWXoG7eImQRrkOGDoIpOGRwuCHDFTq8fu/dXd7l7ilR
+oc2Fe/e+v++933vvyy+d21pbXc9t5ZVc/M1G7sNaXtmMv36/ASphCCF0CO+2
+hKD/G438QpOHGIOS0yShCWsdaScxDT8RJUAWcUtrInTwcZIYL86VUbWuJBsy
+ihP5xMpeaU1l9OQnmuhmwC0liVsYmyX0BGQBIQwPekxsC2+NbYzbMchOE8iX
+F3+ILJ/aCZ6RAHOlaFpVOrwgfUHkCcErtGM0UYwERnKWjrGlg54mQnGrSuW4
+neg5TVTKnl2cUwfx6JiM5HojtW7pZenpqi1nz8oSyDOL3+3oFyTaWHr5Cb7E
+QVDruOUOJZ/WZuVT+dIFQa0v7tJ33wNCOwYh9nzoOqyq1nETFNIH72AhLWdq
+4ci8WSJwReY9CSw9e1XJbO6VZ9CUPRvqTLfBLBXS6r6SVOt2Aq1ZWCcvyBO9
+W/oAY4Dum9Pt7sVXrmIY4wOEhvy24Xv0RwY4NuRfaMLTn+qjH701wv/EmSzS
+XCHHTWuaK6LfU3AULXq7bzZC99YxNxq7cwyTOZYlaQfuVXhAcIO5kuqHQolp
+JCTE7iHpCSDosgoXWC/1dwpY2AegU44CMVThVBuBNx4rJmLvNrMiEUj6P8/e
+4m4lU0gffQ5MipiPjosmLCklX/KBAODiNhAueFSt1rNXPHwI4GI7pTU392qz
+3AEtXetAW43Me9CjYYU0Aa9oesPGwMdYfkRbKdC/TiP6gXlI8hvLc525jrE8
+7hXG+rPcxU1gu0H1jZQn3BX6tNzFTfCjQKxCI2Wk4Ct5+uN96G/rExj8XgeZ
+ng+X+/APqqMI3ljQUNoCWjialLSww0yqgstFgpUvhBnZ4BsdIhFmUxUwowcD
+VAYarxbyhCueWNxbWYsaSzYTvKYM6ETlLQN2JaxFLb2SWchzk7ZjlYy6r3Us
+PWgWSA0oS4Qa9GyyTXeLPwYIOkazuatkJJprZtRY7AWPsV5uHOO1XDNjrb4/
+IcZGBwTCgA0N/QV1lm9h\
+\>"]], "\<\"\"\>"},
+    {
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 3.333333333333333}, {2., 3.1192496502407963`*^-16}, {
+        3., -3.333333333333333}, {4., -3.9454117056747506`*^-16}, {5., 
+        3.333333333333333}, {6., -1.4094628242311558`*^-17}, {
+        7., -3.333333333333333}, {8., -5.035034889022683*^-16}, {9., 
+        3.333333333333333}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True], 
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 3.333333333333333}, {2., 3.1192496502407963`*^-16}, {3.,
+         3.333333333333333}, {4., 3.9454117056747506`*^-16}, {5., 
+        3.333333333333333}, {6., 1.4094628242311558`*^-17}, {7., 
+        3.333333333333333}, {8., 5.035034889022683*^-16}, {9., 
+        3.333333333333333}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True], 
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 3.333333333333333}, {2., -1.1232334506949826`*^-16}, {
+        3., -3.3333333333333326`}, {4., -5.835176092316985*^-16}, {5., 
+        3.3333333333333326`}, {6., 8.61940727125976*^-17}, {
+        7., -3.333333333333333}, {8., 3.854338723185968*^-17}, {9., 
+        3.333333333333333}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True], 
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 3.333333333333333}, {2., 1.1232334506949826`*^-16}, {3.,
+         3.3333333333333326`}, {4., 5.835176092316985*^-16}, {5., 
+        3.3333333333333326`}, {6., 8.61940727125976*^-17}, {7., 
+        3.333333333333333}, {8., 3.854338723185968*^-17}, {9., 
+        3.333333333333333}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True]},
+    {
+     GraphicsBox[
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{1., 0.7252262718512659}, {2., -1.1111111111111112`}, {
+        3., -0.5912098735977285}, {4., 3.1993169350797963`}, {5., 
+        5.5555555555555545`}, {6., 3.1993169350797954`}, {
+        7., -0.591209873597729}, {8., -1.1111111111111107`}, {9., 
+        0.7252262718512655}}]},
+      AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+      Axes->True,
+      AxesOrigin->{0, Automatic},
+      PlotRange->Automatic,
+      PlotRangeClipping->True], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 0.}, {2., 0.}, {3., 0.}, {4., 0.}, {5., 10.}, {6., 0.}, {
+        7., 0.}, {8., 0.}, {9., 0.}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}]}, {
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 3.333333333333333}, {2., -3.132308735953027}, {3., 
+        2.5534814770632597`}, {4., -1.6666666666666665`}, {5., 
+        0.5788272588897678}, {6., 0.5788272588897678}, {
+        7., -1.6666666666666665`}, {8., 2.5534814770632597`}, {
+        9., -3.132308735953027}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}], 
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 0.}, {2., 1.1400671444188955`}, {3., -2.142625365621797}, {
+        4., 2.886751345948128}, {5., -3.282692510040693}, {6., 
+        3.282692510040693}, {7., -2.886751345948128}, {8., 
+        2.142625365621797}, {9., -1.1400671444188955`}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}], 
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 3.333333333333333}, {2., 3.3333333333333326`}, {3., 
+        3.3333333333333326`}, {4., 3.3333333333333326`}, {5., 
+        3.333333333333333}, {6., 3.333333333333333}, {7., 
+        3.3333333333333326`}, {8., 3.3333333333333326`}, {9., 
+        3.3333333333333326`}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}]}, {
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 3.333333333333333}, {2., 3.1192496502407963`*^-16}, {
+        3., -3.333333333333333}, {4., -3.9454117056747506`*^-16}, {5., 
+        3.333333333333333}, {6., -1.4094628242311558`*^-17}, {
+        7., -3.333333333333333}, {8., -5.035034889022683*^-16}, {9., 
+        3.333333333333333}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}], 
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 3.333333333333333}, {2., 3.1192496502407963`*^-16}, {3., 
+        3.333333333333333}, {4., 3.9454117056747506`*^-16}, {5., 
+        3.333333333333333}, {6., 1.4094628242311558`*^-17}, {7., 
+        3.333333333333333}, {8., 5.035034889022683*^-16}, {9., 
+        3.333333333333333}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}], 
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 3.333333333333333}, {2., -1.1232334506949826`*^-16}, {
+        3., -3.3333333333333326`}, {4., -5.835176092316985*^-16}, {5., 
+        3.3333333333333326`}, {6., 8.61940727125976*^-17}, {
+        7., -3.333333333333333}, {8., 3.854338723185968*^-17}, {9., 
+        3.333333333333333}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}], 
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 3.333333333333333}, {2., 1.1232334506949826`*^-16}, {3., 
+        3.3333333333333326`}, {4., 5.835176092316985*^-16}, {5., 
+        3.3333333333333326`}, {6., 8.61940727125976*^-17}, {7., 
+        3.333333333333333}, {8., 3.854338723185968*^-17}, {9., 
+        3.333333333333333}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}]}, {
+     Graphics[{
+       Hue[0.67, 0.6, 0.6], 
+       Point[{{1., 0.7252262718512659}, {2., -1.1111111111111112`}, {
+        3., -0.5912098735977285}, {4., 3.1993169350797963`}, {5., 
+        5.5555555555555545`}, {6., 3.1993169350797954`}, {
+        7., -0.591209873597729}, {8., -1.1111111111111107`}, {9., 
+        0.7252262718512655}}]}, {
+      AspectRatio -> GoldenRatio^(-1), Axes -> True, 
+       AxesOrigin -> {0, Automatic}, PlotRange -> Automatic, 
+       PlotRangeClipping -> True}]}}]]], "Output",
+ CellChangeTimes->{{3.4535280527243*^9, 3.45352806318587*^9}, {
+   3.453528116144055*^9, 3.453528141198497*^9}, 3.453529491208757*^9, 
+   3.45352953754089*^9, {3.45352991620184*^9, 3.453530007502556*^9}, 
+   3.453530092979884*^9, {3.453530129834281*^9, 3.453530187180668*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"Exp", "[", 
+     RowBox[{"\[ImaginaryI]", " ", "2", "\[Pi]", " ", 
+      RowBox[{"z", "/", "\[Lambda]"}]}], "]"}], 
+    RowBox[{"\[ImaginaryI]", " ", "\[Lambda]", " ", "z"}]], 
+   RowBox[{"Exp", "[", 
+    RowBox[{"\[ImaginaryI]", " ", 
+     FractionBox["\[Pi]", 
+      RowBox[{"\[Lambda]", " ", "z"}]], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["y", "2"]}], ")"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FourierTransform", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Xi]", ",", "\[Eta]"}], "}"}], ",", 
+    RowBox[{"FourierParameters", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"2", "\[Pi]"}]}], "}"}]}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Simplify", "@", 
+   RowBox[{"Normal", "@", 
+    RowBox[{"Series", "[", 
+     RowBox[{
+      RowBox[{"%", 
+       RowBox[{"Exp", "[", 
+        RowBox[{
+         RowBox[{"-", "\[ImaginaryI]"}], " ", "2", 
+         RowBox[{"\[Pi]", " ", "/", "\[Lambda]"}], " ", "z"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Lambda]", " ", ",", "0", ",", "2"}], "}"}]}], "]"}]}]}], 
+  " ", 
+  RowBox[{"Exp", "[", 
+   RowBox[{"\[ImaginaryI]", " ", "2", 
+    RowBox[{"\[Pi]", " ", "/", "\[Lambda]"}], " ", "z"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"InverseFourierTransform", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Xi]", ",", "\[Eta]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}], ",", 
+   RowBox[{"FourierParameters", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.45474593131082*^9, 3.454745933009534*^9}, {
+   3.454745978610801*^9, 3.454746140574583*^9}, {3.45474618920276*^9, 
+   3.454746228951459*^9}, {3.454746288699409*^9, 3.454746290460418*^9}, {
+   3.454746334175009*^9, 3.454746404461765*^9}, {3.454746438913517*^9, 
+   3.454746452748337*^9}, {3.454746715536151*^9, 3.454746762461817*^9}, {
+   3.45474683473488*^9, 3.454746836110585*^9}, {3.454751387017883*^9, 
+   3.454751455687443*^9}, 3.454753216797465*^9, {3.454753258194947*^9, 
+   3.454753300950706*^9}, {3.454753346031437*^9, 3.45475336527659*^9}, {
+   3.454753402301541*^9, 3.454753487413783*^9}, {3.454753553582565*^9, 
+   3.454753666445*^9}, {3.454754453098758*^9, 3.454754460768044*^9}, {
+   3.454754510006712*^9, 3.454754530361988*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   FractionBox[
+    RowBox[{"2", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "z"}], 
+    "\[Lambda]"]], " ", 
+  RowBox[{"(", 
+   RowBox[{"1", "-", 
+    RowBox[{"\[ImaginaryI]", " ", "\[Pi]", " ", "z", " ", "\[Lambda]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[Eta]", "2"], "+", 
+       SuperscriptBox["\[Xi]", "2"]}], ")"}]}], "-", 
+    RowBox[{
+     FractionBox["1", "2"], " ", 
+     SuperscriptBox["\[Pi]", "2"], " ", 
+     SuperscriptBox["z", "2"], " ", 
+     SuperscriptBox["\[Lambda]", "2"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[Eta]", "2"], "+", 
+        SuperscriptBox["\[Xi]", "2"]}], ")"}], "2"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.454753666859204*^9, {3.454754512244311*^9, 3.454754533438269*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.454753666859204*^9, 3.454754512244311*^9, 
+  3.454754550180937*^9}]
+}, Open  ]]
+},
+WindowSize->{614, 964},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Linux x86 (32-bit) (February 25, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 2386, 58, 341, "Input"],
+Cell[2956, 82, 12179, 256, 496, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15172, 343, 2566, 66, 180, "Input"],
+Cell[17741, 411, 854, 24, 47, "Output"],
+Cell[18598, 437, 117, 2, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
